@@ -1,4 +1,4 @@
-package main
+package client
 
 import (
 	"fmt"
@@ -59,7 +59,7 @@ func multHandler(addService proto.AddServiceClient) func(ctx *gin.Context) {
 	}
 }
 
-func main() {
+func Run() {
 	conn, err := grpc.Dial("localhost:4040", grpc.WithInsecure())
 	if err != nil {
 		panic(err)
