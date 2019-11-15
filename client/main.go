@@ -1,4 +1,4 @@
-package client
+package main
 
 import (
 	"fmt"
@@ -59,8 +59,9 @@ func multHandler(addService proto.AddServiceClient) func(ctx *gin.Context) {
 	}
 }
 
-func Run() {
-	conn, err := grpc.Dial("localhost:4040", grpc.WithInsecure())
+func main() {
+	// The "server" URL comes from docker-compose. If run in a different way, use "localhost"
+	conn, err := grpc.Dial("server:4040", grpc.WithInsecure())
 	if err != nil {
 		panic(err)
 	}
@@ -84,6 +85,6 @@ func Run() {
 	g.GET("/mult/:a/:b", multHandler(addService))
 
 	if err := g.Run(":4041"); err != nil {
-		log.Fatalf("Failed to run server: %v", err)
+		log.Fatalf("Failed to run client: %v", err)
 	}
 }

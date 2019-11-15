@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  server:
+    build: ./server
+    ports:
+      - 4040:4040
+
+  client:
+    build: ./client
+    ports:
+      - 4041:4041

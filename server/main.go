@@ -1,4 +1,4 @@
-package server
+package main
 
 import (
 	"context"
@@ -28,7 +28,7 @@ func (s *server) Multiply(ctx context.Context, req *proto.Request) (*proto.Respo
 	return &proto.Response{Result: result}, nil
 }
 
-func Run() {
+func main() {
 	listener, err := net.Listen("tcp", ":4040")
 	if err != nil {
 		panic(err)

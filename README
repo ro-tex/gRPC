@@ -1,1 +1,7 @@
 This follows https://www.youtube.com/watch?v=Y92WWaZJl24.
+
+Build and run:
+ - ./build.sh
+ - docker-compose up
+
+I'll try to find a way to bind the build operation within `docker-compose up` but for the moment this will do.
