@@ -1,4 +1,4 @@
-module grpc
+module gitlab.com/ro-tex/grpc
 
 go 1.13
 

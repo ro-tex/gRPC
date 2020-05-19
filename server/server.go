@@ -2,11 +2,12 @@ package server
 
 import (
 	"context"
-	"grpc/proto"
 	"net"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
+
+	"gitlab.com/ro-tex/grpc/proto"
 )
 
 type server struct{}

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"grpc/client"
-	"grpc/server"
+	"gitlab.com/ro-tex/grpc/client"
+	"gitlab.com/ro-tex/grpc/server"
 )
 
 func main() {

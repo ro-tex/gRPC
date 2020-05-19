@@ -2,14 +2,14 @@ package client
 
 import (
 	"fmt"
-	"grpc/proto"
 	"log"
 	"net/http"
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-
 	"google.golang.org/grpc"
+
+	"gitlab.com/ro-tex/grpc/proto"
 )
 
 func addHandler(addService proto.AddServiceClient) func(ctx *gin.Context) {
